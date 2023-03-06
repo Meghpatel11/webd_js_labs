@@ -162,15 +162,15 @@ function DisplayServicesPage()
             </div>
             </div>`;
 
-    // Injecting HTML to created element
-    detailParagraph.setAttribute("class", "container");
-    detailParagraph.innerHTML = detailParagraphParagraph;
-    DocumentBody.appendChild(detailParagraph);
-}
+        // Injecting HTML to created element
+        detailParagraph.setAttribute("class", "container");
+        detailParagraph.innerHTML = detailParagraphParagraph;
+        DocumentBody.appendChild(detailParagraph);
+    }
 
 /**
  * print the user entered data to console and redirect user to home in 3s.
- */
+ */ 
 function timeRedirect(e)
 {
     let contactEmail = document.getElementById('exampleInputEmail1').value;
@@ -189,8 +189,8 @@ function timeRedirect(e)
             window.location.href = "index.html";
         }, 3000)
     
-}
-
+    }
+    
 // calling function on btn click    
 let submitButton = document.getElementById('submit-button');
 if (submitButton)
@@ -198,14 +198,13 @@ if (submitButton)
     submitButton.addEventListener('click', timeRedirect, false);
 }
 
-
 /**
  * Function to load whole website by calling all functions above.
  */
 function Start()
     {
         //changing text to "interests"
-        document.querySelectorAll("nav ul li a")[1].innerHTML = '<i class="fa fa-code"></i>Interests';
+        document.querySelectorAll("nav ul li a")[1].innerHTML = '<i class="fa fa-globe"></i>Interests';
         let mainContent = document.querySelector("main");
         console.log(mainContent);
 
@@ -226,16 +225,17 @@ function Start()
         // logic to rander all pages
         switch (document.title) 
         {
-          case "Home":
-              displayHome();
+            case "Home":
+                displayHome();
             break;
-          case "Product":
-              displayProduct();
+            case "Product":
+                displayProduct();
             break;
-          case "Services":
-              DisplayServicesPage();
+            case "Services":
+                DisplayServicesPage();
             break;
-        
+            
+
         }        
     }
 
